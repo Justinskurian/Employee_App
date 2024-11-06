@@ -10,7 +10,7 @@ const Home = () => {
       .get("https://jsonplaceholder.typicode.com/users")
       .then((res) => {
         console.log(res.data);
-        setData(res.data); // Set the fetched data in state
+        setData(res.data);
       })
       .catch((err) => {
         console.log(err);
@@ -30,13 +30,13 @@ const Home = () => {
                     component="div"
                     sx={{ color: "text.secondary" }}
                   >
-                    {row.id}
+                    ID: {row.id}
                   </Typography>
                   <Typography component="div" variant="h5">
                     {row.name}
                   </Typography>
                   <Typography component="div" variant="subtitle2">
-                    {row.email}
+                    Email : {row.email}
                   </Typography>
                 </CardContent>
               </Card>
